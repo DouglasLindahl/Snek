@@ -10,7 +10,7 @@
     { 0, 0, 0, 0, 0, 0, 0, 0, 0 }
 };
 
-
+Console.WriteLine("test");
 for(int y = 0; y <= 8; y++)
 {
     for (int x = 0; x <= 8; x++)

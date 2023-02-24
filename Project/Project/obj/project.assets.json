@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/douglaslindahl/Yrgo/c#/Project/Project/Project.csproj",
+      "projectUniqueName": "/Users/douglaslindahl/Yrgo/c#/snek/Project/Project/Project.csproj",
       "projectName": "Project",
-      "projectPath": "/Users/douglaslindahl/Yrgo/c#/Project/Project/Project.csproj",
+      "projectPath": "/Users/douglaslindahl/Yrgo/c#/snek/Project/Project/Project.csproj",
       "packagesPath": "/Users/douglaslindahl/.nuget/packages/",
-      "outputPath": "/Users/douglaslindahl/Yrgo/c#/Project/Project/obj/",
+      "outputPath": "/Users/douglaslindahl/Yrgo/c#/snek/Project/Project/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/douglaslindahl/.nuget/NuGet/NuGet.Config"
