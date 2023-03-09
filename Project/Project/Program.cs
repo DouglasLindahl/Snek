@@ -1,21 +1,36 @@
-﻿int[,] test = new int[,] {
-    { 0, 0, 0, 1, 0, 0, 0, 0, 0 },
-    { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-    { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-    { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-    { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-    { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-    { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-    { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-    { 0, 0, 0, 0, 0, 0, 0, 0, 0 }
-};
+﻿
 
-Console.WriteLine("test");
-for(int y = 0; y <= 8; y++)
+var game = new Game();
+game.Start();
+
+while (!game.GameOver)
 {
-    for (int x = 0; x <= 8; x++)
+    // listen to key presses
+    if (Console.KeyAvailable)
     {
-        Console.SetCursorPosition(x, y);
-        Console.Write(test[y, x]);
+        var input = Console.ReadKey(true);
+
+        switch (input.Key)
+        {
+            // send key presses to the game if it's not paused
+            case ConsoleKey.UpArrow:
+            case ConsoleKey.DownArrow:
+            case ConsoleKey.LeftArrow:
+            case ConsoleKey.RightArrow:
+                if (!game.Paused)
+                    game.Input(input.Key);
+                break;
+
+            case ConsoleKey.P:
+                if (game.Paused)
+                    game.Resume();
+                else
+                    game.Pause();
+                break;
+
+            case ConsoleKey.Escape:
+                game.Stop();
+                return;
+        }
     }
 }
